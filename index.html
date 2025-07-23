@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Flycheese Studio | Digital Art Training</title>
-  <link rel="shortcut icon" href="Assets/Images/Flycheese-Logo-Remake.png">
+  <title>Billy Schwenzer | Digital Artist</title>
+  <link rel="shortcut icon" href="Assets/Images/SchwenzerLogo1.png">
   <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -17,62 +17,49 @@
         <a href="#landing"></a>
       </div>        
         <div class="nav-links mobile-hidden">
-            <a href="#about">About Us</a>
+            <a href="#about" onclick="scrollToSection('#about')">About Me</a>
                     <!-- DROPDOWN MENU -->
             <div class="dropdown">          
               <a class="dropbtn">Services ▾</a>
               <div class="dropdown-content">
-                <a href="#pricing" onclick="scrollToSection('#pricing')">Pricing</a>
-                <a href="#workshops">Workshops</a>
-                <a href="#schools">Schools</a>
-                <a href="#prowork">Professional Work</a>
+                <a href="#gd" onclick="scrollToSection('#gd')">Graphic Design</a>
+                <a href="#3d" onclick="scrollToSection('#3d')">3D</a>
+                <a href="#unity" onclick="scrollToSection('#unity')">Unity</a>
+                <a href="#webdev" onclick="scrollToSection('#webdev')">Unity</a>
               </div>
             </div>              
-            <a href="#studios">Studios</a> 
-            <a href="#gallery">Gallery</a>
-            <a href="#news">News &amp Updates</a>
-            <a href="#contact">Contact Us</a>
+            <a href="https://www.artstation.com/billy_schwenzer" target="_blank" rel="noopener noreferrer">Portfolio</a>
+            <a href="#blog" onclick="scrollToSection('#blog')">My Blog</a>
+            <a href="#contact" onclick="scrollToSection('#contact')">Contact Me</a>
 
           </div>      
           <label class="nav-links-dropdown-button mobile-show">
             <input type="checkbox">
           </label>
           <aside class="sidebar mobile-show">
-            <div><a href="#about">About Us</a></div>
+            <div><a href="#about" onclick="scrollToSection('#about')">About Us</a></div>
                     <!-- DROPDOWN MENU -->
             <div class = "dropdown-mobile-nav">          
               <a class="dropbtn-mobile-nav">Services ▾</a>
               <div class="dropdown-content-mobile-nav">
-                <a href="#pricing">Pricing</a>
-                <a href="#workshops">Workshops</a>
-                <a href="#schools">Schools</a>
-                <a href="#prowork">Professional Work</a>
+                <a href="#gd" onclick="scrollToSection('#gd')">Graphic Design</a>
+                <a href="#3d" onclick="scrollToSection('#3d')">3D</a>
+                <a href="#unity" onclick="scrollToSection('#unity')">Unity</a>
+                <a href="#webdev" onclick="scrollToSection('#webdev')">Unity</a>
               </div>
             </div>              
-            <div><a href="#studios">Studios</a> </div>
-            <div><a href="#gallery">Gallery</a></div>
-            <div><a href="#news">News &amp Updates</a></div>
-            <div><a href="#contact">Contact Us</a></div>
+            <div><img width="100px" height="100px" src="Assets/Images/ArtstationLogo.png"><a href="https://www.artstation.com/billy_schwenzer" target="_blank" rel="noopener noreferrer">Portfolio</a></div>
+            <div><a href="#blog" onclick="scrollToSection('#blog')">My Blog</a></div>
+            <div><a href="#contact" onclick="scrollToSection('#contact')">Contact Me</a></div>
           </aside>
     </div>
   </nav>
   <div class = "wrapper">
     <!-- LANDING SECTION -->
-    <section id="landing">
-        <section class="section-left" id = "landing-content">
-          <div class = "content-holder">
-            <p id = "welcome">Welcome to</p>
-            <h1>FLYCHEESE STUDIO</h1>
-            <p class="upper" id = "tag_line">
-            Making expression accessible
-            </p>
-            <p id = "landing-text">We are a <b>Digital Art Training</b> studio focused on empowering individuals with Autism or who require additional support, to learn and develop their digital art skills.</p><br>
-            <p id = "landing-text">Through our <a href="#workshops">Workshops</a> and accredited courses, we provide accessible learning opportunities that cater to a diverse range of needs and aspirations.</p><br>
-            <p id = "landing-text">Our specialization lies in animation and digital art, offering a wide array of creative opportunities across various mediums. As part of our commitment to inclusion, we provide students with real-world experience by involving them in <a href="#professional">Professional Projects</a></p><br>
-            <p id = "landing-text">Many of our students have advanced to become valued members of our team, showcasing the potential for growth and professional development within our supportive environment.</p>
-            <button class="btn" id="to-section-button" onclick="scrollToSection('about')">Learn About Us</button>
-          </div>
-        </section>
+    <section id="landing">          
+          <div class="landing-logo"></div>
+          <div class="landing-header"></div>
+          <div class="tag-line"></div>
     </section>
 
     <!-- ABOUT SECTION -->
