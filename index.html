@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flycheese Studio | Digital Art Training</title>
+  <link rel="shortcut icon" href="https://flycheese.com/wp-content/uploads/2015/11/favicon.png">
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">
+        <a href="#landing"></a>
+      </div>        
+        <div class="nav-links mobile-hidden">
+            <a href="#about">About Us</a>
+                    <!-- DROPDOWN MENU -->
+            <div class="dropdown">          
+              <a class="dropbtn">Services ▾</a>
+              <div class="dropdown-content">
+                <a href="#pricing" onclick="scrollToSection('#pricing')">Pricing</a>
+                <a href="#workshops">Workshops</a>
+                <a href="#schools">Schools</a>
+                <a href="#prowork">Professional Work</a>
+              </div>
+            </div>              
+            <a href="#studios">Studios</a> 
+            <a href="#gallery">Gallery</a>
+            <a href="#news">News &amp Updates</a>
+            <a href="#contact">Contact Us</a>
+
+          </div>      
+          <label class="nav-links-dropdown-button mobile-show">
+            <input type="checkbox">
+          </label>
+          <aside class="sidebar mobile-show">
+            <div><a href="#about">About Us</a></div>
+                    <!-- DROPDOWN MENU -->
+            <div class = "dropdown-mobile-nav">          
+              <a class="dropbtn-mobile-nav">Services ▾</a>
+              <div class="dropdown-content-mobile-nav">
+                <a href="#pricing">Pricing</a>
+                <a href="#workshops">Workshops</a>
+                <a href="#schools">Schools</a>
+                <a href="#prowork">Professional Work</a>
+              </div>
+            </div>              
+            <div><a href="#studios">Studios</a> </div>
+            <div><a href="#gallery">Gallery</a></div>
+            <div><a href="#news">News &amp Updates</a></div>
+            <div><a href="#contact">Contact Us</a></div>
+          </aside>
+    </div>
+  </nav>
+  <div class = "wrapper">
+    <!-- LANDING SECTION -->
+    <section id="landing">
+        <section class="section-left" id = "landing-content">
+          <div class = "content-holder">
+            <p id = "welcome">Welcome to</p>
+            <h1>FLYCHEESE STUDIO</h1>
+            <p class="upper" id = "tag_line">
+            Making expression accessible
+            </p>
+            <p id = "landing-text">We are a <b>Digital Art Training</b> studio focused on empowering individuals with Autism or who require additional support, to learn and develop their digital art skills.</p><br>
+            <p id = "landing-text">Through our <a href="#workshops">Workshops</a> and accredited courses, we provide accessible learning opportunities that cater to a diverse range of needs and aspirations.</p><br>
+            <p id = "landing-text">Our specialization lies in animation and digital art, offering a wide array of creative opportunities across various mediums. As part of our commitment to inclusion, we provide students with real-world experience by involving them in <a href="#professional">Professional Projects</a></p><br>
+            <p id = "landing-text">Many of our students have advanced to become valued members of our team, showcasing the potential for growth and professional development within our supportive environment.</p>
+            <button class="btn" id="to-section-button" onclick="scrollToSection('about')">Learn About Us</button>
+          </div>
+        </section>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section-center"id="about">
+      <div class = "content-holder">
+        <h2>About Us</h2>
+        <p>
+        We are a passionate team dedicated to creating meaningful experiences through workshops and events.
+        </p>
+        <button class="btn" id="to-section-button" onclick="scrollToSection('workshops')">View Workshops</button>
+      </div>
+    </section>
+
+    <!-- WORKSHOPS SECTION -->
+    <section class="section-center" id="services">
+      <div class = "content-holder">
+        <h2>Our Services</h2>
+        <p>
+        We host a variety of workshops to inspire, teach, and connect people. More info coming soon!
+        </p>
+        <button class="btn" id="to-top-button" onclick="scrollToSection('landing')">Back to Top</button>
+      </div>      
+
+    </section>
+
+    <!-- WORKSHOPS SECTION -->
+    <section class="section-center" id="studios">
+      <div class = "content-holder">
+        <h2>Studios</h2>
+        <p>
+        We host a variety of workshops to inspire, teach, and connect people. More info coming soon!
+        </p>
+        <button class="btn" id="to-top-button" onclick="scrollToSection('landing')">Back to Top</button>
+      </div>      
+
+    </section>
+
+        <!-- WORKSHOPS SECTION -->
+    <section class="section-center" id="gallery">
+      <div class = "content-holder">
+        <h2>Our Gallery</h2>
+        <p>
+        Take a look at some of our work created by our students and staff.
+        </p>
+        <button class="btn" id="to-top-button" onclick="scrollToSection('landing')">Back to Top</button>
+      </div>      
+
+    </section>
+
+    <section class="section-center" id="news">
+      <div class = "content-holder">
+        <h2>News &amp Updates</h2>
+        <p>
+        Find out what we at Flycheese have been getting upto, from past workshops and showcases to new projects, staff and students.
+        </p>
+        <button class="btn" id="to-top-button" onclick="scrollToSection('landing')">Back to Top</button>
+      </div>
+
+    </section>
+
+    <section class="section-center" id="contact">
+
+      <div class="contact-container">
+        <h1>Contact us</h1>
+        <form id="form" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+          <!-- Honeypot -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+          <!-- Public Access Key -->
+          <input type="hidden" name="access_key" value="a73fa243-3867-46b7-b79f-40238791b8e5">
+
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="NAME (REQUIRED)" required autocomplete="on">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="EMAIL (REQUIRED)" required autocomplete="on">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="SUBJECT" />          
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="YOUR MESSAGE TO US" required></textarea>
+
+          <input id="form-submit-button" type="submit">
+        </form>
+        <div id="submit-result" class="">
+          <p>PLACEHOLDER</p>
+        </div>
+      </div>
+      
+      
+    </section>
+  </div>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.onload = function() {
+      // Reset the form fields when the page loads
+      document.getElementById("form").reset();
+      const form = document.getElementById('form');
+      const result = document.getElementById('submit-result');
+      
+      //on submit, POST to web3Forms and get response
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+        result.innerHTML = "Please wait..."
+        //fetch result
+        fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {//show response
+                let json = await response.json();
+                console.log(json);
+                if (response.status == 200) {
+                    result.innerHTML = json.message;
+                    result.classList.add("submit-success");
+                } else {
+                    console.log(response);
+                    result.innerHTML = json.message;
+                    result.classList.add("submit-warning");
+      
+                }
+            })
+            .catch(error => {//show error
+                console.log(error);
+                result.innerHTML = "Something went wrong!";
+                result.classList.add("submit-error");
+      
+            })
+            .then(function() {//reset form
+                form.reset();
+                //make response dissapear after 3 seconds if you wish
+                setTimeout(() => {
+                  result.classList.remove("submit-warning" ,"submit-success", "submit-error")
+                }, 15000);
+            });
+      });
+
+    }
+  </script>
+</body>
+</html>
