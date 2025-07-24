@@ -7,14 +7,15 @@
     --blackAlpha: #181106be;
     --lightgrey: #6c7a75;
     --greyblue: #4d646a;
-    --white: #f3eee3;
+    --white: #fafafa;
 
-    --hamburger-width: max(30px, calc(10vh - 20px));
+    --hamburger-width: max(25px, calc(10vh - 20px));
     --hamburger-height: calc(var(--hamburger-total-height)/9);
     --hamburger-gap: calc((var(--hamburger-total-height) - (3 * var(--hamburger-height))) / 2);
-    --hamburger-total-height: max(30px, calc(10vh - 20px));
+    --hamburger-total-height: max(25px, calc(10vh - 30px));
     --nav-anim-timing: .5s ease-in-out;
-    --font-family: "Lato", sans-serif;
+    --font-family-a: "Urbanist", sans-serif;
+    --font-family-b: "Aldrich", sans-serif;
 }
 
 /* --- RESET --- */
@@ -22,7 +23,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Lato", sans-serif;
+    font-family: var(--font-family-a);
   }
 
   html {
@@ -33,9 +34,9 @@
   body {
     width: 100vw;
     height: 100vh;
-    font-family: "Lato", sans-serif;
+    font-family:  var(--font-family-a);
     color: #222;
-
+    letter-spacing: .2rem;
   }
 
   .wrapper{
@@ -211,6 +212,39 @@
     transition: .3s ease-in-out;
   }
 
+  .landing-logo{
+    max-width: 320px;
+    max-height: 260px;
+    height: auto;
+    width: 50%;
+    aspect-ratio: 3/2;
+    background-image: url("Assets/Images/S Solo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;   
+  }
+
+  .landing-header{
+    color: var(--white);
+    text-transform: uppercase !important;
+  }
+
+  .landing-header h1{
+      font-size: clamp(1.2rem, 5rem, calc(.1rem + 8vw));
+      line-height: clamp(1.3rem, 6rem, calc(.1rem + 9vw));
+      font-weight: 1000;
+      letter-spacing: calc(.1rem + .5vw);
+      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.719);
+      text-align: center;
+  }
+
+  .landing-header p{
+    font-weight: lighter;
+    font-family: var(--font-family-b) !important;
+    font-size: clamp(.8rem, 3.75rem, calc(.1rem + 6.1vw));
+    letter-spacing: clamp(.1rem, 0.2rem, calc(.1rem + 1.1vw));
+    text-align: center;
+  }
 
 /* Landscape phones and down */
 @media only screen and (max-width: 480px) {
@@ -290,15 +324,14 @@
   .nav-links-dropdown-button{
     --x-width: calc(var(--hamburger-total-height) * 1.4);
     transform-origin: center center;
-    translate: translateX(-50%);
+    transform: translateX(-25%);
     z-index: 1005;
     display: flex;
     flex-direction: column;
     gap: var(--hamburger-gap);
     position: absolute;
-    right: 10px;
+    right: 0px;
     cursor: pointer;
-    width: var(--hamburger-total-height);
   }
 
   .nav-links-dropdown-button::before,
@@ -308,7 +341,7 @@
     display: block;
     content: "";    
     background-color: var(--white);
-    width: var(--hamburger-width);
+    width: var(--hamburger-total-height);
     height: var(--hamburger-height);
     border-radius: 1000px;
     transform-origin: right center;
@@ -376,21 +409,21 @@
   }
 
   .logo {    
-    min-height: 30px;
-    min-width: 30px;
+    min-height: 50px;
+    min-width: 50px;
     max-height: 450px;
-    top: 5px;
-    left: 5px;
+    top: min(10px,calc((15vh - 20px)/4));
+    left: 10px;
     position: absolute; 
     
-    width: calc(10vh - 10px);
-    height: calc(10vh - 10px);
+    width: calc(15vh - 20px);
+    height: calc(15vh - 20px);
     background-image: url("Assets/Images/SchwenzerLogo1.png");
     background-size: contain;
     background-position: center;
     background-origin: content-box;
     background-repeat: no-repeat;
-    border-radius: 0;
+    border-radius: 50%;
     display: flex;
     align-items:baseline;
     justify-content: space-around;
@@ -462,59 +495,31 @@
 
   /* --- LANDING SECTION & PARALLAX --- */
   #landing{
+
       position: relative;
-      transform-style: preserve-3d;
-  }
-
-  #landing::after{
-      content: "";
-      left: 55%;
-      top:10%;
-      width: 100%;
-      height: 90%;
-      position: absolute;
-      background: url("Assets/Images/Logo Cover.jpg") bottom left no-repeat;
-      background-size: cover;
-      transform: translate3D(230px,50px,-20px) scale(2);
-      filter: blur(0px);
-  }
-
-  #landing::before{
-      content: "";
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      background: url("Assets/Images/Logo Cover.jpg") center center;
-      background-size: contain;
-      transform: translateY(0px)  translateZ(-75px) scale(4.5);
-      filter: blur(2px);
-  }
-
-  #landing-content {
-      font-size: .5em;
-      text-align: center;
-      transform-style: preserve-3d;
-      position: relative;
-      margin: 0 auto;
-      padding: 5vh 5px 0px 5px;
       align-items: center;
-      background-color: var(--blackAlpha) ;
-      box-shadow: 0px 4px 5px rgba(0,0,0,.5);
-      color: var(--white);
+      justify-content: center;
+      gap:10px;
+      text-align: justify;
+      transform-style: preserve-3d;      
+      content: "";
+      width: 100%;
       height: 100%;
+      position: relative;
+      background: #1c1c1c;
+      background: radial-gradient(circle,rgba(59, 65, 66, 1) 0%, rgba(51, 50, 50, 1) 50%, rgba(28, 28, 28, 1)  100%);
+      background-size: contain;
+      display: flex;
+      flex-wrap: wrap;
+      transform: translateZ(-100px) scale(2);
   }
 
- #landing p{
-  max-width: 95%;
-  margin: 0 auto;
-  font-size: clamp(.6rem, 2rem, calc(.1rem + 2.5vw));
- }
 
-  #landing h1 {
-    line-height: 1em;
+
+  .landing-header{
     color: var(--white);
-    font-size: clamp(.5rem, 2.8rem, .1rem + 8vw);
-    margin-bottom: 0px;
+    text-transform: uppercase;
+    text-align: center;
   }
 
   #welcome{
@@ -793,8 +798,6 @@
       color: var(--yellow);
   }
 
-
-
   /* --- SECTIONS --- */
 
   section{
@@ -824,61 +827,34 @@
 
   /* --- LANDING SECTION & PARALLAX --- */
   #landing{
+
       position: relative;
-      transform-style: preserve-3d;
-  }
-
-  #landing::after{
-      content: "";
-      left: 80%;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      background: url("Assets/Images/Backdrop-parallax-fg.png") bottom center no-repeat;
-      background-size: contain;
-      transform: translateX(70px)  translateY(-80px) translateZ(-30px) scale(1.5);
-      filter: blur(0px);
-  }
-
-  #landing::before{
-      content: "";
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      background: url("Assets/Images/Logo Cover.jpg") top center;
-      background-size: contain;
-      transform: translateZ(-80px) scale(2);
-      filter: blur(2px);
-  }
-
-  #landing-content {
-      font-size: .5rem;
-      text-align: center;
-      transform-style: preserve-3d;
-      margin: 0 auto;
-      padding: 5vh 5px 0px 5px;
       align-items: center;
-      background-color: var(--blackAlpha) ;
-      box-shadow: 0px 4px 5px rgba(0,0,0,.5);
-      color: var(--white);
-      width: 90%;
+      justify-content: center;
+      gap:10px;
+      text-align: justify;
+      transform-style: preserve-3d;      
+      content: "";
+      width: 100%;
       height: 100%;
+      position: relative;
+      background: #1c1c1c;
+      background: radial-gradient(circle,rgba(59, 65, 66, 1) 0%, rgba(51, 50, 50, 1) 50%, rgba(28, 28, 28, 1)  100%);
+      background-size: contain;
+      display: flex;
+      flex-wrap: wrap;
+      transform: translateZ(-100px) scale(2);
   }
 
- #landing p{
-  font-size: clamp(.8rem, 2rem, calc(.1rem + 1vw))
- }
-
-  #landing h1 {
-    line-height: calc(.1rem + 10vw);
+  .landing-header{
     color: var(--white);
-    font-size: calc(.1rem + 9vw);
-    margin-bottom: 0px;
+    text-transform: uppercase;
+    text-align: center;
   }
 
   #welcome{
     position: relative;
-    font-size: 2rem;
+    font-size: clamp(.6rem, 2rem, calc(.1rem + 3vw)) !important;
     text-transform: uppercase;
     letter-spacing: .2em;
   }
@@ -1007,11 +983,6 @@
   }
 }
 
-
-
-
-
-
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 1199px) {
 
@@ -1138,66 +1109,34 @@
   #landing{
 
       position: relative;
+      align-items: center;
+      justify-content: center;
+      gap:10px;
       text-align: justify;
-      transform-style: preserve-3d;
-  }
-
-  #landing::after{
-      content: "";
-      left:75%;
-      width: 65%;
-      height: 100%;
-      position: absolute;
-      background: url("Assets/Images/Backdrop-parallax-fg.png") bottom center no-repeat;
-      background-size: contain;
-      transform: translateZ(-50px) scale(1.5);
-      filter: blur(0px);
-  }
-
-  #landing::before{
+      transform-style: preserve-3d;      
       content: "";
       width: 100%;
       height: 100%;
-      position: absolute;
-      background: url("Assets/Images/Logo Cover.jpg") top center;
+      position: relative;
+      background: #1c1c1c;
+      background: radial-gradient(circle,rgba(59, 65, 66, 1) 0%, rgba(51, 50, 50, 1) 50%, rgba(28, 28, 28, 1)  100%);
       background-size: contain;
+      display: flex;
+      flex-wrap: wrap;
       transform: translateZ(-100px) scale(2);
-      filter: blur(2px);
-  }
-
-  #landing-content{
-      font-size: 1rem;
-      transform-style: preserve-3d;
-      position: absolute;
-      left:10%;
-      padding: 10% 20px 0px 20px;
-      background-color: var(--blackAlpha) ;
-      box-shadow: 0px 4px 5px rgba(0,0,0,.5);
-      
-      width: 50%;
-      height: 100%;
-  }
-
-  #landing h1 {
-    line-height: calc(.1rem + 3.5w);
-    color: var(--white);
-    text-align: center;
-    font-size: calc(.1rem + 4.3vw);
-    margin-bottom: 0px;
-  }
-
-  #landing p {
-    text-align: justify;
-    color: var(--white);
-    font-size: clamp(.5rem, 1.1rem, calc(.1rem + 1.5vw));
   }
 
   #welcome{
-    font-size: .3em;
+    position: relative;
+    font-size: clamp(.6rem, 2rem, calc(.1rem + 3vw)) !important;
     text-transform: uppercase;
-    text-align: center !important;
     letter-spacing: .2em;
   }
+
+  #landing-text {
+    font-size: 2em;
+  }
+
   #landing-text a{
     text-decoration: none;
     font-style: bold;
@@ -1446,28 +1385,33 @@
   #landing{
 
       position: relative;
+      align-items: center;
+      justify-content: center;
+      gap:10px;
       text-align: justify;
       transform-style: preserve-3d;      
       content: "";
       width: 100%;
       height: 100%;
       position: relative;
-      background: url("Assets/Images/Logo Cover.jpg") center center;
+      background: #1c1c1c;
+      background: radial-gradient(circle,rgba(59, 65, 66, 1) 0%, rgba(51, 50, 50, 1) 50%, rgba(28, 28, 28, 1)  100%);
       background-size: contain;
+      display: flex;
+      flex-wrap: wrap;     
+      z-index: -100;
   }
 
-  #landing h1 {
-    line-height: calc(.1rem + 3.8vw);
-    color: var(--white);
-    text-align: center;
-    font-size: calc(.1rem + 4vw);
-    margin-bottom: 0px;
+  #landing div {
+    z-index: 1000;
   }
 
-  #landing p {
-    text-align: justify;
-    color: var(--white);
-    font-size: clamp(.6rem, 1.5rem, calc(.1rem + 1vw));
+  .landing-header{
+      font-size: clamp(1rem,2.5rem, calc(.1rem + 2vw));
+      font-weight: 1000;
+      letter-spacing: calc(.1rem + .5vw);
+      text-transform: uppercase;
+      color: var(--white)
   }
 
   #welcome{
@@ -1476,6 +1420,7 @@
     text-align: center !important;
     letter-spacing: .2em;
   }
+
   #landing-text a{
     text-decoration: none;
     font-style: bold;

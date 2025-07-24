@@ -6,6 +6,9 @@
   <title>Billy Schwenzer | Digital Artist</title>
   <link rel="shortcut icon" href="Assets/Images/SchwenzerLogo1.png">
   <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -37,7 +40,7 @@
             <input type="checkbox">
           </label>
           <aside class="sidebar mobile-show">
-            <div><a href="#about" onclick="scrollToSection('#about')">About Us</a></div>
+            <div><a href="#about" onclick="scrollToSection('#about')">About Me</a></div>
                     <!-- DROPDOWN MENU -->
             <div class = "dropdown-mobile-nav">          
               <a class="dropbtn-mobile-nav">Services ▾</a>
@@ -48,7 +51,7 @@
                 <a href="#webdev" onclick="scrollToSection('#webdev')">Unity</a>
               </div>
             </div>              
-            <div><img width="100px" height="100px" src="Assets/Images/ArtstationLogo.png"><a href="https://www.artstation.com/billy_schwenzer" target="_blank" rel="noopener noreferrer">Portfolio</a></div>
+            <div><a href="https://www.artstation.com/billy_schwenzer" target="_blank" rel="noopener noreferrer">Portfolio</a></div>
             <div><a href="#blog" onclick="scrollToSection('#blog')">My Blog</a></div>
             <div><a href="#contact" onclick="scrollToSection('#contact')">Contact Me</a></div>
           </aside>
@@ -58,16 +61,21 @@
     <!-- LANDING SECTION -->
     <section id="landing">          
           <div class="landing-logo"></div>
-          <div class="landing-header"></div>
-          <div class="tag-line"></div>
+          <div class="landing-header">
+            <h1>BILLY SCHWENZER</h1>
+            <p>3D &amp; Digital Artist</p>
+          </div>
+          <div class="external-links-nav">
+            
+          </div>
     </section>
 
     <!-- ABOUT SECTION -->
     <section class="section-center"id="about">
       <div class = "content-holder">
-        <h2>About Us</h2>
-        <p>
-        We are a passionate team dedicated to creating meaningful experiences through workshops and events.
+        <h2>About Me</h2>
+        <p>I am a graduate in 3D Game Design, with 4 years professional experience as a 3D Generalist working on <a href="https://edyn.world" target="_blank" rel="noopener noreferrer">EDYN</a>,
+          during my time at Galestorm I worked on Character Props and Costmetics, Animating, Rigging, Lighting, VFX, Optimising, Technical Art and Documentation, Enviroment and Level Design and more!
         </p>
         <button class="btn" id="to-section-button" onclick="scrollToSection('workshops')">View Workshops</button>
       </div>
