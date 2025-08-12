@@ -174,7 +174,7 @@
           <!-- Honeypot -->
           <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
           <!-- Public Access Key -->
-          <input type="hidden" name="access_key" value="a73fa243-3867-46b7-b79f-40238791b8e5">
+          <input type="hidden" name="access_key" value="c01cf6ab-0a74-4f8c-b2c7-24c6d81188ad">
 
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="NAME (REQUIRED)" required autocomplete="on">
@@ -209,10 +209,18 @@
       const result = document.getElementById('submit-result');
       
       //on submit, POST to web3Forms and get response
-      form.addEventListener('submit', function(event) {
-        event.preventDefault();
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
 
         const formData = new FormData(form);
+        //If subject is empty, change to 
+        const subject = formData.get('subject');
+        const name = formData.get('name');
+        if(subject.toString().length === 0) {
+          subject = "New Email from ${name} via my site"
+        }
+        formData.append('subject', subject);
+
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
         result.innerHTML = "Please wait..."
