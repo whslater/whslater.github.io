@@ -25,11 +25,11 @@
             <div class="dropdown">          
               <a class="dropbtn">Links ▾</a>
               <div class="dropdown-content">
-                <a href="#3d" onclick="scrollToSection('#3d')">3D</a>
+                <a href="#td" onclick="scrollToSection('#td')">3D</a>
                 <a href="#gd" onclick="scrollToSection('#gd')">Graphic Design</a>
                 <a href="#unity" onclick="scrollToSection('#unity')">Unity</a> 
                 <a href="#webdev" onclick="scrollToSection('#webdev')">Wed Development</a>
-                <a href="#photos" onclick="scrollToSection('#photography')">Photography</a>
+                <a href="#photography" onclick="scrollToSection('#photography')">Photography</a>
               </div>
             </div>              
             <a href="#contact" onclick="scrollToSection('#contact')">Contact</a>
@@ -44,14 +44,14 @@
             <div class = "dropdown-mobile-nav">          
               <a class="dropbtn-mobile-nav">Services ▾</a>
               <div class="dropdown-content-mobile-nav">
-                <a href="#3d" onclick="scrollToSection('#3d')">3D</a>
-                <a href="#gd" onclick="scrollToSection('#gd')">Graphic Design</a>                
+                <a href="#td" onclick="scrollToSection('#td')">3D</a>
                 <a href="#unity" onclick="scrollToSection('#unity')">Unity</a>
+                <a href="#gd" onclick="scrollToSection('#gd')">Graphic Design</a>                             
                 <a href="#webdev" onclick="scrollToSection('#webdev')">Wed Development</a>
                 <a href="#photos" onclick="scrollToSection('#photography')">Photography</a>
               </div>
             </div>
-            <div><a href="#contact" onclick="scrollToSection('#contact')">Contact</a></div>              
+            <div><a onclick="scrollToSection('#contact')">Contact</a></div>              
             <div class="icon-link" id="artstation"><a href="https://www.artstation.com/billy_schwenzer" target="_blank" rel="noopener noreferrer">ARTSTATION</a></div>
             <div class= "icon-link" id="instagram"><a href="https://www.instagram.com/schwenzerrr" target="_blank" rel="noopener noreferrer">INSTAGRAM</a></div>
             
@@ -72,46 +72,83 @@
     </section>
 
     <!-- ABOUT SECTION -->
-    <section class="section-center"id="about">
+    <section class="section-center"id="me">
       <div class = "content-holder">
         <h2>About Me</h2>
         <p>I am a graduate in 3D Game Design, with 4 years professional experience as a 3D Generalist working on <a href="https://edyn.world" target="_blank" rel="noopener noreferrer">EDYN</a>,
           during my time at Galestorm I worked on Character Props and Costmetics, Animating, Rigging, Lighting, VFX, Optimising, Technical Art and Documentation, Enviroment and Level Design and more!
         </p>
-        <button class="btn" id="to-section-button" onclick="scrollToSection('workshops')">View Workshops</button>
+        <div id="about-links">
+          <a id="about-link-artstation"></a>
+          <a id="about-link-fab"></a>
+          <a id="about-link-instagram"></a>
+        </div>
       </div>
     </section>
 
-    <!-- WORKSHOPS SECTION -->
-    <section class="section-center" id="services">
+    <!-- 3D SECTION -->
+    <section class="section-center" id="td">
       <div class = "content-holder">
-        <h2>Our Services</h2>
+        <h2>3D</h2>
         <p>
-        We host a variety of workshops to inspire, teach, and connect people. More info coming soon!
+        I do 3D. More info coming soon!
         </p>
         <button class="btn" id="to-top-button" onclick="scrollToSection('landing')">Back to Top</button>
       </div>      
-
     </section>
 
-    <!-- WORKSHOPS SECTION -->
-    <section class="section-center" id="studios">
+    <!-- UNITY SECTION -->
+    <section class="section-center" id="unity">
       <div class = "content-holder">
-        <h2>Studios</h2>
+        <h2>Unity</h2>
         <p>
-        We host a variety of workshops to inspire, teach, and connect people. More info coming soon!
+        I do Unity. More info coming soon!
         </p>
         <button class="btn" id="to-top-button" onclick="scrollToSection('landing')">Back to Top</button>
       </div>      
-
     </section>
 
-        <!-- WORKSHOPS SECTION -->
+    <!-- GD SECTION -->
+    <section class="section-center" id="gd">
+      <div class = "content-holder">
+        <h2>Graphic Design</h2>
+        <p>
+        I do Graphic Design. More info coming soon!
+        </p>
+        <button class="btn" id="to-top-button" onclick="scrollToSection('landing')">Back to Top</button>
+      </div>      
+    </section>
+
+    <!-- WD SECTION -->
+    <section class="section-center" id="webdev">
+      <div class = "content-holder">
+        <h2>WEB DEVELOPMENT</h2>
+        <p>
+        I do Web Dev (I made this website). More info coming soon!
+        </p>
+        <button class="btn" id="to-top-button" onclick="scrollToSection('landing')">Back to Top</button>
+      </div>      
+    </section>
+
+    <!-- PHOTOGRAPHY SECTION -->
+    <section class="section-center" id="photography">
+      <div class = "content-holder">
+        <h2>PHOTOGRAPHY</h2>
+        <p>
+        I do Photography. More info coming soon!
+        </p>
+        <button class="btn" id="to-top-button" onclick="scrollToSection('landing')">Back to Top</button>
+      </div>      
+    </section>
+
+ 
+
+    <!-- GALLERY SECTION -->
     <section class="section-center" id="gallery">
       <div class = "content-holder">
-        <h2>Our Gallery</h2>
+        <h2>My Gallery</h2>
         <p>
-        Take a look at some of our work created by our students and staff.
+        Take a look at some of my work!
         </p>
         <button class="btn" id="to-top-button" onclick="scrollToSection('landing')">Back to Top</button>
       </div>      
@@ -122,7 +159,7 @@
       <div class = "content-holder">
         <h2>News &amp Updates</h2>
         <p>
-        Find out what we at Flycheese have been getting upto, from past workshops and showcases to new projects, staff and students.
+        Find out what I've been upto.
         </p>
         <button class="btn" id="to-top-button" onclick="scrollToSection('landing')">Back to Top</button>
       </div>
@@ -132,7 +169,7 @@
     <section class="section-center" id="contact">
 
       <div class="contact-container">
-        <h1>Contact us</h1>
+        <h1>Contact Me</h1>
         <form id="form" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
           <!-- Honeypot -->
           <input type="checkbox" name="botcheck" class="hidden" style="display: none;">

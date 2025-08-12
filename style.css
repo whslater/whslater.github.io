@@ -270,6 +270,39 @@
     text-align: center;
   }
 
+  .btn {
+    background-color: var(--black);
+    color: var(--white);
+  }
+
+  .btn:hover{
+    background-color: rgb(31, 31, 31);
+    color: var(--white);
+  }
+
+  .content-holder > h2{
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+  .content-holder > p{
+    font-size: 1.5rem;
+  }
+
+  .content-holder > p > a{
+    text-decoration: none;
+    font-weight: 1000;
+  }
+
+  #me, #unity, #webdev, #gallery{
+    background: #f9f9f9;
+  }
+
+  #td, #gd, #photography, #news{
+    background: var(--black);
+    color: var(--white);
+  }
+
 /* Landscape phones and down */
 @media only screen and (max-width: 480px) {
 
@@ -302,8 +335,8 @@
     align-items: top;
     justify-content: left;
     top:10vh;
-    left: 25vw;
-    width: 75vw;
+    left: 21vw;
+    width: 80vw;
     min-height: 90vh;
     transform: translateZ(1px);
     z-index: 900;
@@ -349,6 +382,7 @@
   .sidebar> div:hover > a {
     margin-left: 40px !important;
     color: var(--black) !important;
+    opacity: 90%;
   }
 
   .sidebar > div > a:hover{
@@ -447,12 +481,12 @@
     min-height: 30px;
     min-width: 30px;
     max-height: 450px;
-    top: 5px;
-    left: 5px;
+    top: 10px;
+    left: 10px;
     position: absolute; 
     
     width: auto;
-    height: calc(100% - 10px);
+    height: calc(100% - 20px);
     aspect-ratio: 1 / 1;
     background-image: url("Assets/Images/SchwenzerLogo1.png");
     background-size: contain;
@@ -476,6 +510,8 @@
     display: flex;
     gap: 2vw;
     margin-left: 3vh; /* Space for logo */
+    height: 100%;
+    align-items: center;
   }
  
   .nav-links a {
@@ -486,12 +522,12 @@
     color: var(--white);
     font-weight: 1000;
     transition: color 0.3s;
+    margin: auto;
   }
 
   .nav-links a:hover{
       color: var(--yellow);
   }
-
 
   /* --- SECTIONS --- */
 
@@ -596,34 +632,21 @@
     position: absolute;
     bottom: 50px;
     left:20px;
+
   }
 
   .btn {
     margin: 30px auto;
     display: flex;
     padding: 12px 25px;
-    background:var(--yellow);
     box-shadow: #110e0860 0px 5px 3px, var(--verylightyellow) 0px -1px 3px;
-    color: var(--black);
     border: none;
     border-radius: 15px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
     z-index: 1000;
-  }
-
-  .btn:hover {
-      background: var(--lightyellow);
-  }
-
-  #about, #studios, #news {
-    background: #f9f9f9;
-  }
-
-  #services, #workshops, #contact {
-    background: #e8f4ff;
   }
 
   /* --- DROPDOWN MENU --- */
@@ -691,6 +714,8 @@
 
   .dropdown-mobile-nav {
     position: relative;
+    background: var(--black);
+    margin-top: 2px;
   }
 
   .dropbtn-mobile-nav {
@@ -707,7 +732,11 @@
     
   }
 
-  .dropbtn-mobile-nav:hover {
+  .sidebar > .dropdown-mobile-nav:hover > a{
+    font-size: 0rem !important;
+    width: 0rem !important;
+    margin: 0px;
+    margin-left: 10px !important;
     color: #007BFF;
   }
 
@@ -731,6 +760,7 @@
     color: var(--black);
     text-decoration: none;
     transition: 0.2s;
+    background-color: var(--white);
   }
 
   .dropdown-content-mobile-nav a:hover {
@@ -741,6 +771,7 @@
 
   .dropdown-mobile-nav:hover{
     height: max-content !important;
+    background-color: var(--black) !important;
   }
 
   /* Show dropdown on hover */
@@ -820,18 +851,21 @@
 
   .nav-links {
     display: flex;
-    gap: 1.5vw;
-    margin-left: 0; /* Space for logo */
+    gap: 2vw;
+    margin-left: 3vh; /* Space for logo */
+    height: 100%;
+    align-items: center;
   }
-
+ 
   .nav-links a {
     text-decoration: none;
     text-transform: uppercase;
     font-style: bold;
-    font-size: max(1rem, calc(.1rem + 3vw));
+    font-size: .5em;
     color: var(--white);
     font-weight: 1000;
     transition: color 0.3s;
+    margin: auto;
   }
 
   .nav-links a:hover{
@@ -927,7 +961,6 @@
   }
 
   #to-top-button{
-    width: 100px;
     position: absolute;
     bottom: 30px;
     left:10px;
@@ -937,9 +970,7 @@
     margin: 30px auto;
     display: flex;
     padding: 12px 25px;
-    background:var(--yellow);
     box-shadow: #110e0860 0px 5px 3px, var(--verylightyellow) 0px -1px 3px;
-    color: var(--black);
     border: none;
     border-radius: 15px;
     font-size: 1rem;
@@ -948,18 +979,6 @@
     transition: 0.3s;
     z-index: 1000;
     transition: background .5s;
-  }
-
-  .btn:hover {
-      background: var(--lightyellow);
-  }
-
-  #about, #studios, #news {
-    background: #f9f9f9;
-  }
-
-  #services, #workshops, #contact {
-    background: #e8f4ff;
   }
 
   /* --- DROPDOWN MENU --- */
@@ -994,7 +1013,8 @@
     display: none;
     position: absolute;
     text-align: center;
-    left: -20px;
+    left: -60%;
+    top: 40px;
     background: var(--white);
     min-width: 120px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -1092,7 +1112,9 @@
   .nav-links {
     display: flex;
     gap: 2vw;
-    margin-left: 0; /* Space for logo */
+    margin-left: 3vh; /* Space for logo */
+    height: 100%;
+    align-items: center;
   }
 
   .nav-links a {
@@ -1106,6 +1128,7 @@
     font-weight: 1000;
     transition: color 0.3s;
     min-width: 100px;
+    margin: auto;
   }
 
   .nav-links a:hover{
@@ -1216,9 +1239,7 @@
     margin-top:30px;
     display: flex;
     padding: 12px 25px;
-    background:var(--yellow);
     box-shadow: #110e0860 0px 5px 3px, var(--verylightyellow) 0px -1px 3px;
-    color: var(--black);
     border: none;
     border-radius: 15px;
     font-size: 1rem;
@@ -1227,18 +1248,6 @@
     transition: 0.3s;
     z-index: 1000;
     transition: background .5s;
-  }
-
-  .btn:hover {
-      background: var(--lightyellow);
-  }
-
-  #about, #studios, #news {
-    background: #f9f9f9;
-  }
-
-  #services, #workshops, #contact {
-    background: #e8f4ff;
   }
 
   /* --- DROPDOWN MENU --- */
@@ -1373,8 +1382,11 @@
   .nav-links {
     display: flex;
     gap: 2vw;
-    margin-left: 0; /* Space for logo */
+    margin-left: 3vh; /* Space for logo */
+    height: 100%;
+    align-items: center;
   }
+ 
 
   .nav-links a {
     text-decoration: none;
@@ -1387,6 +1399,7 @@
     font-weight: 1000;
     transition: color 0.3s;
     min-width: 100px;
+    margin: auto;
   }
 
   .nav-links a:hover{
@@ -1504,9 +1517,7 @@
     margin-top:50px;
     display: flex;
     padding: 12px 25px;
-    background:var(--yellow);
     box-shadow: #110e0860 0px 5px 3px, var(--verylightyellow) 0px -1px 3px;
-    color: var(--black);
     border: none;
     border-radius: 15px;
     font-size: 1rem;
@@ -1516,25 +1527,14 @@
     z-index: 1000;
   }
 
-  .btn:hover {
-      background: var(--lightyellow);
-  }
-
-  #about, #studios, #news {
-    background: #f9f9f9;
-  }
-
-  #services, #workshops, #contact {
-    background: #e8f4ff;
-  }
-
   /* --- DROPDOWN MENU --- */
   .dropdown {
     position: relative;
+    height: 100px;
+    align-content: center;
   }
 
   .dropbtn {
-    display: flex;
     height: 100%;
     background: none;
     border: none;
@@ -1550,6 +1550,8 @@
     color: #e7dfc4;
     font-weight: 1000;
     transition: color 0.3s;
+    margin: auto !important;
+    height: fit-content;
   }
 
   .dropbtn:hover {
@@ -1560,8 +1562,8 @@
     display: none;
     position: absolute;
     text-align: center;
-    top: 75px;
-    left: -60%;
+    top: 100px;
+    left: -70%;
     background: var(--black);
     min-width: 120px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
