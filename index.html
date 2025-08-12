@@ -17,41 +17,41 @@
   <nav>
     <div class="nav-container">
       <div class="logo">
-        <a href="#landing"></a>
+        <a onclick="scrollToSection('landing-scroll-anchor')"></a>
       </div>        
         <div class="nav-links mobile-hidden">
-            <a href="#me" onclick="scrollToSection('#about')">ABOUT ME</a>
+            <a onclick="scrollToSection('about')">ABOUT ME</a>
                     <!-- DROPDOWN MENU -->
             <div class="dropdown">          
               <a class="dropbtn">Links ▾</a>
               <div class="dropdown-content">
-                <a href="#td" onclick="scrollToSection('#td')">3D</a>
-                <a href="#unity" onclick="scrollToSection('#unity')">Unity</a>
-                <a href="#gd" onclick="scrollToSection('#gd')">Graphic Design</a>
-                <a href="#webdev" onclick="scrollToSection('#webdev')">Wed Development</a>
-                <a href="#photography" onclick="scrollToSection('#photography')">Photography</a>
+                <a onclick="scrollToSection('td')">3D</a>
+                <a onclick="scrollToSection('unity')">Unity</a>
+                <a onclick="scrollToSection('gd')">Graphic Design</a>                             
+                <a onclick="scrollToSection('webdev')">Wed Development</a>
+                <a onclick="scrollToSection('photography')">Photography</a>
               </div>
             </div>              
-            <a href="#contact" onclick="scrollToSection('#contact')">Contact</a>
+            <a onclick="scrollToSection('contact')">Contact</a>
 
           </div>      
           <label class="nav-links-dropdown-button mobile-show">
             <input type="checkbox">
           </label>
           <aside class="sidebar mobile-show">
-            <div><a href="#me" onclick="scrollToSection('#about')">About Me</a></div>
+            <div><a onclick="scrollToSection('me')">About Me</a></div>
                     <!-- DROPDOWN MENU -->
             <div class = "dropdown-mobile-nav">          
               <a class="dropbtn-mobile-nav">Services ▾</a>
               <div class="dropdown-content-mobile-nav">
-                <a href="#td" onclick="scrollToSection('#td')">3D</a>
-                <a href="#unity" onclick="scrollToSection('#unity')">Unity</a>
-                <a href="#gd" onclick="scrollToSection('#gd')">Graphic Design</a>                             
-                <a href="#webdev" onclick="scrollToSection('#webdev')">Wed Development</a>
-                <a href="#photos" onclick="scrollToSection('#photography')">Photography</a>
+                <a onclick="scrollToSection('td')">3D</a>
+                <a onclick="scrollToSection('unity')">Unity</a>
+                <a onclick="scrollToSection('gd')">Graphic Design</a>                             
+                <a onclick="scrollToSection('webdev')">Wed Development</a>
+                <a onclick="scrollToSection('photography')">Photography</a>
               </div>
             </div>
-            <div><a onclick="scrollToSection('#contact')">Contact</a></div>              
+            <div><a onclick="scrollToSection('contact')">Contact</a></div>              
             <div class="icon-link" id="artstation"><a href="https://www.artstation.com/billy_schwenzer" target="_blank" rel="noopener noreferrer">ARTSTATION</a></div>
             <div class= "icon-link" id="instagram"><a href="https://www.instagram.com/schwenzerrr" target="_blank" rel="noopener noreferrer">INSTAGRAM</a></div>
             
@@ -60,7 +60,9 @@
   </nav>
   <div class = "wrapper">
     <!-- LANDING SECTION -->
-    <section id="landing">          
+     <div class ="scroll-anchor" id="landing-scroll-anchor"></div>
+    <section id="landing">         
+          
           <div class="landing-logo"></div>
           <div class="landing-header">
             <h1>BILLY SCHWENZER</h1>
@@ -93,8 +95,9 @@
         <p>
         I do 3D. More info coming soon!
         </p>
-        <button class="btn" id="to-top-button" onclick="scrollToSection('landing')">Back to Top</button>
-      </div>      
+        
+      </div>
+      <button class="btn to-top-button-light" id="" onclick="scrollToSection('landing-scroll-anchor')"></button>      
     </section>
 
     <!-- UNITY SECTION -->
@@ -104,8 +107,9 @@
         <p>
         I do Unity. More info coming soon!
         </p>
-        <button class="btn" id="to-top-button" onclick="scrollToSection('landing')">Back to Top</button>
-      </div>      
+        
+      </div>
+      <button class="btn to-top-button-dark" id="" onclick="scrollToSection('landing-scroll-anchor')"></button>      
     </section>
 
     <!-- GD SECTION -->
@@ -115,8 +119,9 @@
         <p>
         I do Graphic Design. More info coming soon!
         </p>
-        <button class="btn" id="to-top-button" onclick="scrollToSection('landing')">Back to Top</button>
-      </div>      
+        
+      </div>
+      <button class="btn to-top-button-light" id="" onclick="scrollToSection('landing-scroll-anchor')"></button>      
     </section>
 
     <!-- WD SECTION -->
@@ -126,8 +131,9 @@
         <p>
         I do Web Dev (I made this website). More info coming soon!
         </p>
-        <button class="btn" id="to-top-button" onclick="scrollToSection('landing')">Back to Top</button>
-      </div>      
+        
+      </div>
+      <button class="btn to-top-button-dark" id="" onclick="scrollToSection('landing-scroll-anchor')"></button>      
     </section>
 
     <!-- PHOTOGRAPHY SECTION -->
@@ -137,8 +143,9 @@
         <p>
         I do Photography. More info coming soon!
         </p>
-        <button class="btn" id="to-top-button" onclick="scrollToSection('landing')">Back to Top</button>
-      </div>      
+        
+      </div>
+      <button class="btn to-top-button-light" id="" onclick="scrollToSection('landing-scroll-anchor')"></button>      
     </section>
 
  
@@ -150,8 +157,9 @@
         <p>
         Take a look at some of my work!
         </p>
-        <button class="btn" id="to-top-button" onclick="scrollToSection('landing')">Back to Top</button>
-      </div>      
+        
+      </div>
+      <button class="btn to-top-button-dark" id="" onclick="scrollToSection('landing')"></button>      
 
     </section>
 
@@ -161,9 +169,9 @@
         <p>
         Find out what I've been upto.
         </p>
-        <button class="btn" id="to-top-button" onclick="scrollToSection('landing')">Back to Top</button>
+        
       </div>
-
+      <button class="btn to-top-button-light" id="" onclick="scrollToSection('landing-logo')"></button>
     </section>
 
     <section class="section-center" id="contact">
@@ -199,7 +207,7 @@
 
   <script>
     function scrollToSection(id) {
-      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth', inline: 'nearest' });
     }
 
     window.onload = function() {
