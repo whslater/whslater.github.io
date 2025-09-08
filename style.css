@@ -309,6 +309,10 @@
     padding: 20px;
   }
 
+  .nav-link a{
+    cursor: pointer;
+  }
+
   /* Landing CSS */
 
   #landing::after{
