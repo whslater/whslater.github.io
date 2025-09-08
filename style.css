@@ -370,7 +370,7 @@
   }
 
   .content-holder > h2{
-    font-size: clamp(1.2rem,calc(.1rem + 10vh),3rem);
+    font-size: clamp(1.2rem,calc(.1rem + 9vw),3rem);
     margin-bottom: clamp(10px,5vh,20px);
   }
 
@@ -1189,7 +1189,7 @@
   section{
       position: relative;
       min-height: 95vh;
-      height: 100%;
+      height: max-content;
       width: 100%;
       display: flex;
       flex-direction: column;
