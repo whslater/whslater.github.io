@@ -142,7 +142,7 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
 
-  #photography a{
+  #photography a, #light-link{
     text-decoration: none;
     color: white;
     font-weight: 1000;
@@ -150,9 +150,24 @@
     transition: 0.3s;
   }
 
-  #photography a:hover{
+  #photography a:hover, #light-link:hover{
     text-decoration: underline;
     color: rgb(212, 212, 212);
+    font-weight: 1000;
+    cursor: pointer;
+  }
+
+  #dark-link{
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 1000;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  #dark-link:hover{
+    text-decoration: underline;
+    color: black;
     font-weight: 1000;
     cursor: pointer;
   }
