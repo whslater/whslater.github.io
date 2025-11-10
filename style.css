@@ -3,7 +3,7 @@
     --darkyellow: #c58b18;
     --lightyellow: #fcbf47;
     --verylightyellow: #f3e0ba;
-    --black : #110e08;
+    --black : #070603;
     --blackAlpha: #181106be;
     --lightgrey: #6c7a75;
     --greyblue: #4d646a;
@@ -14,7 +14,7 @@
     --hamburger-gap: calc((var(--hamburger-total-height) - (3 * var(--hamburger-height))) / 2);
     --hamburger-total-height: max(25px, calc(10vh - 30px));
     --nav-anim-timing: .5s ease-in-out;
-    --font-family-a: "Urbanist", sans-serif;
+    --font-family-a: "New Amsterdam", sans-serif;
     --font-family-b: "Aldrich", sans-serif;
     --dark-gradiant: radial-gradient(circle,rgba(59, 65, 66, 1) 0%, rgba(51, 50, 50, 1) 50%, rgba(28, 28, 28, 1)  100%);
     --instagram-icon: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/256px-Instagram_icon.png?20200512141346");
@@ -97,6 +97,10 @@
     left: 50%;
     width: 0;
     height: 0;
+  }
+
+  #landing{
+    background-image: url("Assets/Images/Logo Cover 1.png");
   }
 
   .icon-link, .icon-link > a{
@@ -370,6 +374,7 @@
   .landing-header p{
     font-weight: lighter;
     font-family: var(--font-family-b) !important;
+    font-weight: 100;
     font-size: clamp(.8rem, 3.75rem, calc(.1rem + 5.1vw));
     letter-spacing: clamp(.1rem, 0.2rem, calc(.1rem + 1.1vw));
   }
