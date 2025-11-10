@@ -150,7 +150,7 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
 
-  #photography a, #light-link{
+  #light-link{
     text-decoration: none;
     color: white;
     font-weight: 1000;
@@ -187,6 +187,7 @@
     background-image: url("Assets/Images/contact cover.jpg");
     background-color: var(--black);
     background-size: cover;
+    background-position: center;
     z-index: 1000;
     width: 100%;
     height: 100%;
@@ -412,6 +413,7 @@
 
   #me, #gd, #photography, #gallery{
     background: #f9f9f9;
+    color: var(--black);
   }
 
   #td, #webdev, #news{
