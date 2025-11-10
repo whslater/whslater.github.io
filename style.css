@@ -8,7 +8,10 @@
     --lightgrey: #6c7a75;
     --greyblue: #4d646a;
     --white: #e9e9e9;
+    --logo: url("Assets/Images/Logo.jpg");
 
+    --lightbackground: url("Assets/Images/whitewall.jpg");
+    --darkbackground: url("Assets/Images/darkwall.jpg");
     --hamburger-width: max(25px, calc(8vh - 20px));
     --hamburger-height: calc(var(--hamburger-total-height)/9);
     --hamburger-gap: calc(var(--hamburger-height) * 2);
@@ -123,12 +126,53 @@
     background-position: right;
   }
 
+
+
   #artstation > a{
     background-image: var(--artstation-icon);
     background-repeat: no-repeat;
     background-position: right;
   }
 
+  #tdartstation{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    content: '';
+    height: 80px;
+    width: 80px;
+    background-image: var(--artstation-icon);
+    background-size: contain;
+    background-position: center;
+  }
+
+  .content-image{
+    position: absolute;
+    left: 67%;
+    width: 33%;
+    height: 100%;
+    z-index: -10;
+    display: block;
+    background-color: var(--black);
+    box-shadow: inset 10px 10px 100px var(--black), inset 300px 0px 1000px #0000003d, 20px 0px 100px var(--black);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .tdPhoto{
+    filter: brightness(0.25);
+    background-image: url("Assets/Images/td.jpg");
+  }
+
+  .photographyPhoto{
+    opacity: 0.5;
+    background-image: url("Assets//Images/Photos.jpg");
+  }
+
+  .gdPhoto{
+    opacity: 0.5;
+    background-image: url("Assets//Images/GraphicDesign.jpg");
+  }
   
   .nav-links a:hover{
       color: rgb(255, 247, 221);
@@ -158,7 +202,7 @@
     transition: 0.3s;
   }
 
-  #photography a:hover, #light-link:hover{
+  #light-link:hover{
     text-decoration: underline;
     color: rgb(212, 212, 212);
     font-weight: 1000;
@@ -344,6 +388,11 @@
     transition: .3s ease-in-out;
   }
 
+  #landing{
+    transform: translateZ(-30px) scale(1.4);
+    z-index: -200;
+  }
+
   .landing-logo{
     max-width: 320px;
     max-height: 260px;
@@ -362,8 +411,8 @@
     width: 95%;
     top:65%;
     position: absolute;    
-    transform: translateZ(20px);
-    scale: 0.8;
+    transform: translateZ(1px) scale(0.9);
+    z-index: 50;
   }
 
   .landing-header h1, .landing-header p {
@@ -411,23 +460,42 @@
     font-weight: 1000;
   }
 
-  #me, #gd, #photography, #gallery{
-    background: #f9f9f9;
+  #me, #gd, #webdev, #gallery{
+    background-image: var(--lightbackground);
+    background-size: cover;
+    background-position: center;
+    background-color: #f9f9f9;
     color: var(--black);
   }
 
-  #td, #webdev, #news{
-    background: var(--black);
+  #td, #photography, #news{
+    background-image: var(--darkbackground);
+    background-size: cover;
+    background-position: center;
+    background-color: var(--black);
     color: var(--white);
   }
 
   .content-holder{
-    width: 90%;
+    width: 55%;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+    margin-left: 5%;
+    margin-right: auto;
   } 
+
+  .content-holder.full-width-content{
+    width: 95%;
+    margin: 0 auto;
+  }
+
 /* Landscape phones and down */
 @media only screen and (max-width: 480px) {
 
-
+  .content-holder, .content-holder.full-width-content{
+    width: 85%;
+    margin: 0 auto;
+  }
 
   .mobile-hidden{
     display: none !important;
@@ -611,7 +679,7 @@
     width: auto;
     height: calc(100% - 20px);
     aspect-ratio: 1 / 1;
-    background-image: url("Assets/Images/SchwenzerLogo1.png");
+    background-image: var(--logo);
     background-size: contain;
     background-position: center;
     background-origin: content-box;
@@ -659,6 +727,8 @@
       flex-direction: column;
       transform-style: preserve-3d;
       align-items: center;
+      overflow: hidden;
+      z-index: -15;
   }
   .section-center{
       display: flex;
@@ -673,15 +743,6 @@
       justify-content: center;
       text-align: left;
       transform-style: preserve-3d;
-  }
-
-
-  /* --- CONTENT HOLDER --- */
-
-  .content-holder {
-    width: 80%;
-    height: max-content;
-    margin: 0 auto;
   }
 
   /* --- LANDING SECTION & PARALLAX --- */
@@ -896,7 +957,7 @@
     left: 0;
     width: 100%;
     height: 10vh;
-    min-height: 40px;
+    min-height: 60px;
     max-height: 80px;
     background: var(--black);
     display: flex;
@@ -926,16 +987,16 @@
   .logo {
     position: absolute;
     margin-right: 3vw;
-    top: 10px; /* Overlaps bottom edge */
+    top: 5px; /* Overlaps bottom edge */
     left: 10px;
-    min-height: 50px;
-    min-width: 50px;
+    min-height: 70px;
+    min-width: 70px;
     max-height: 450px;
     width: 4vw;
     height: auto;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    background-image: url("Assets/Images/SchwenzerLogo1.png");
+    background-image: var(--logo);
     background-size: contain;
     background-position: center;
     background-origin: content-box;
@@ -956,13 +1017,14 @@
     gap: 5vw;
     height: 100%;
     align-items: center;
+    margin: 0 0 0 30px;
   }
 
   .nav-links a {
     text-decoration: none;
     text-transform: uppercase;
     font-style: bold;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: var(--white);
     font-weight: 1000;
     transition: color 0.3s;
@@ -1171,7 +1233,7 @@
     max-height: 450px;
     width: 10vw;
     height: 10vw;
-    background-image: url("Assets/Images/SchwenzerLogo1.png");
+    background-image: var(--logo);
     background-size: contain;
     background-position: center;
     background-origin: content-box;
@@ -1236,14 +1298,6 @@
       justify-content: center;
       text-align: left;
       transform-style: preserve-3d;
-  }
-
-  /* --- CONTENT HOLDER --- */
-
-  .content-holder {
-    width: 80%;
-    height: 100%;
-    margin: 0 auto;
   }
 
   /* --- LANDING SECTION & PARALLAX --- */
@@ -1415,7 +1469,7 @@
     max-height: 150px;
     max-width: 150px;
     /* background-image: url("Assets/Images/SchwenzerLogo1.png"); */
-    background-image: url("Assets/Images/Logo.jpg");
+    background-image: var(--logo);
     background-size: cover;
     background-position: center;
     background-origin: content-box;
@@ -1471,7 +1525,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      text-align: justify;
+      text-align: center;
       transform-style: preserve-3d;
   }
   .section-left{
@@ -1479,15 +1533,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      text-align: left;
+      text-align: center;
       transform-style: preserve-3d;
-  }
-
-  /* --- CONTENT HOLDER --- */
-
-  .content-holder {
-    width: 80%;
-    height: max-content;
   }
 
   /* --- LANDING SECTION & PARALLAX --- */
@@ -1496,7 +1543,7 @@
       align-items: center;
       justify-content: center;
       gap:10px;
-      text-align: justify;
+      text-align: center;
       transform-style: preserve-3d;      
       content: "";
       width: 100%;
@@ -1621,6 +1668,17 @@
     display: block;
     padding: 10px;
   }
+
+  .content-holder.full-width-content{
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .content-holder{
+    width: 55%;
+    margin: 0 auto 0 3.5%;
+  }
+
 }
 
 
