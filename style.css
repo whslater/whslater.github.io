@@ -700,7 +700,6 @@
       background-size: cover;
       display: flex;
       flex-wrap: wrap;
-      transform: translateZ(-100px) scale(2);
   }
 
 
@@ -1015,7 +1014,6 @@
       background-size: cover;
       display: flex;
       flex-wrap: wrap;
-      transform: translateZ(-100px) scale(2);
   }
 
   .landing-header{
