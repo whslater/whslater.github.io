@@ -103,6 +103,7 @@
     background-image: url("Assets/Images/Logo Cover 1.png");
     position: relative;
     background-size: cover;
+    background-position: center;
     z-index: -5;
   }
 
@@ -358,7 +359,7 @@
     color: var(--white);
     text-transform: uppercase !important;
     width: 100%;
-    top:50%;
+    top:65%;
     position: absolute;    
     transform: translateZ(20px);
     scale: 0.8;
@@ -409,11 +410,11 @@
     font-weight: 1000;
   }
 
-  #me, #unity, #webdev, #gallery{
+  #me, #gd, #photography, #gallery{
     background: #f9f9f9;
   }
 
-  #td, #gd, #photography, #news{
+  #td, #webdev, #news{
     background: var(--black);
     color: var(--white);
   }
