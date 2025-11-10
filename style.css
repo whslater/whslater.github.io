@@ -419,8 +419,13 @@
     color: var(--white);
   }
 
+  .content-holder{
+    width: 90%;
+  } 
 /* Landscape phones and down */
 @media only screen and (max-width: 480px) {
+
+
 
   .mobile-hidden{
     display: none !important;
@@ -1258,7 +1263,6 @@
       height: 100%;
       display: flex;
       flex-wrap: wrap;
-      transform: translateZ(-100px) scale(2);
   }
 
   #welcome{
