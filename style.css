@@ -704,7 +704,7 @@
     text-align: center;
   }
 
-  .landing-header > h1, p {
+  .landing-header > h1, .landing-header > p {
     line-height: 3.5rem;
   }
 
