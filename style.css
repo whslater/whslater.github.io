@@ -19,7 +19,7 @@
     --nav-anim-timing: .5s ease-in-out;
     --font-family-a: "New Amsterdam", sans-serif;
     --font-family-b: "Aldrich", sans-serif;
-    --dark-gradiant: radial-gradient(circle,rgba(59, 65, 66, 1) 0%, rgba(51, 50, 50, 1) 50%, rgba(28, 28, 28, 1)  100%);
+    --dark-gradiant: radial-gradient(circle,rgb(7, 7, 7) 0%, rgb(3, 3, 3) 50%, rgb(0, 0, 0)  100%);
     --instagram-icon: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/256px-Instagram_icon.png?20200512141346");
     --artstation-icon: url("https://www.artstation.com/assets/favicon-c10fd14662b70e922acd8ef17489a45a5f033c8d447a728f29a72e249310f4e2.ico");
     --home-icon: url("https://upload.wikimedia.org/wikipedia/commons/3/34/Home-icon.svg");
@@ -104,10 +104,15 @@
 
   #landing{
     background-image: url("Assets/Images/Logo Cover 1.png");
+    filter: saturate(0) contrast(2) brightness( 0.9);
     position: relative;
     background-size: cover;
     background-position: center;
     z-index: -100;
+  }
+
+  .landing-header{
+    filter: brightness(1.1);
   }
 
   .icon-link, .icon-link > a{
@@ -175,7 +180,7 @@
   }
   
   .nav-links a:hover{
-      color: rgb(255, 247, 221);
+      color: var(--yellow);
   }
 
   .dropdown-content {
@@ -228,7 +233,7 @@
   /* Contact Formatting */
 
   #contact{
-    background-image: url("Assets/Images/contact cover.jpg");
+    background: var(--dark-gradiant);
     background-color: var(--black);
     background-size: cover;
     background-position: center;
@@ -304,9 +309,9 @@
 
   /* Style the submit button with a specific background color etc */
   input[type=submit] {
-    background-color: #10310d;
-    box-shadow: inset 0px 2px 5px #eeeeee63;
-    color: var(--white);
+    background-color: var(--yellow);
+    box-shadow: inset 0px 2px 5px #eeeeee1e;
+    color: var(--black);
     font-size: clamp(.5rem, 2rem, .1rem + 4vw);
     font-weight: 1000;
     text-transform: uppercase;
@@ -315,7 +320,7 @@
     border-radius: 100px;
     cursor: pointer;
     transition: .3s ease;
-    width: 100%;
+    width: 40%;
     margin-top: 20px;
   }
   
@@ -380,6 +385,7 @@
   }
 
   .nav-links a{
+    transition: all 500ms ease;
     cursor: pointer !important;
   }
 
@@ -714,7 +720,6 @@
     font-size: 1rem;
     color: var(--white);
     font-weight: 1000;
-    transition: color 0.3s;
     margin: auto;
   }
 
@@ -1029,7 +1034,6 @@
     font-size: 1.5rem;
     color: var(--white);
     font-weight: 1000;
-    transition: color 0.3s;
     margin: auto;
   }
 
@@ -1268,7 +1272,6 @@
 
     color: var(--white);
     font-weight: 1000;
-    transition: color 0.3s;
     min-width: 100px;
     margin: auto;
   }
@@ -1505,7 +1508,6 @@
     font-size: min(2.5rem,calc(2vw + .1rem));
     color: var(--white);
     font-weight: 1000;
-    transition: color 0.3s;
     min-width: 100px;
     margin: auto;
   }
